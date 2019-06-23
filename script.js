@@ -1,6 +1,6 @@
 console.log("hello script js");
 
-function inputHappened(currentInput){
+var inputHappened = function(currentInput){
   console.log( currentInput );
   display( "WOW SOMETHING HAPPENED" );
 };
