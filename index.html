@@ -8,7 +8,7 @@
     <script>
       document.querySelector('#input').addEventListener('change', function(event){
         var currentInput = event.target.value;
-        run(currentInput, output)
+        inputHappened(currentInput)
       });
 
       var display = function( data ){
