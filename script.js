@@ -149,75 +149,101 @@ var cat = [];
 var doggy = [];
 var alphabet = [];
 var wordFound = false;
-var i = 10;
+//var i = 10;
+var letterFound = false
 
 console.log("Guess the letter of the word!");
 display("Guess the letter of the word!");
 
-var meow  = function(letter){
+var secretWord = word[0];
+var meow  = function(secretWord, input){
 console.log("Hint: I can wild, lazy, annoying, lovely but not men best friend");
 display2("Hint: I can wild, lazy, annoying, lovely but not men best friend");
 display3("You have 10 tries before your luck runs out");
-    while(i > 0){
-        if (letter == word[0][0]){
-            wordFound = true;
-            console.log("You guess the first letter of the word");
-            display("You guess the first letter of the word");
-            cat.push(letter);
-            if(cat.length === 3){
-                console.log("You win the guessing game. The word is cat.");
-                display("You win the guessing game. The word is cat.");
-            }
-            else{
-                console.log("Please guess the next word");
-                display("Please guess the next word");
-            }
-        }
-        else if(letter == word[0][1]){
-            wordFound = true;
-            console.log("You guess the second letter of the word");
-            display("You guess the second letter of the word");
-            cat.push(letter);
-            if(cat.length === 3){
-                console.log("You win the guessing game. The word is cat.");
-                display("You win the guessing game. The word is cat.");
-            }
-            else{
-                console.log("Please guess the next word");
-                display("Please guess the next word");
-            }
-        }
-        else if(letter == word[0][2]){
-            wordFound = true;
-            console.log("You guess the third letter of the word");
-            display("You guess the third letter of the word");
-            cat.push(letter);
-            if(cat.length === 3){
-                console.log("You win the guessing game. The word is cat.");
-                display("You win the guessing game. The word is cat.");
-            }
-            else{
-                console.log("Please guess the next word");
-                display("Please guess the next word");
-            }
-        }
-        else{
-            console.log("Sorry. Please guess again.");
-            display("Sorry. Please guess again.");
-        }
-    i = i - 1
-    break;
+
+//while loop to go through the secretword array
+var i = 0
+while (i < secretWord.length) {
+    if (input === secretWord[i]) {
+        console.log("yey")
+        break;
     }
 }
+
+
+// console.log("cat: ", cat)
+// console.log("word[0] ", word[0])
+//     while(i > 0){
+//         if (cat[0] == word[0][0]){
+//             console.log("entered if statement", cat[0])
+//             letterFound = true;
+//             console.log("You guess the first letter of the word");
+//             display("You guess the first letter of the word");
+//             cat.push(letter);
+//             i = i - 1;
+//             console.log(i + ": No. of tries left");
+//             display3(i + ": No. of tries left");
+//             if(cat.length === 3){
+//                 console.log("You win the guessing game. The word is cat.");
+//                 display("You win the guessing game. The word is cat.");
+//             }
+//             else{
+//                 console.log("Please guess the next word");
+//                 display("Please guess the next word");
+//             }
+//         }
+//         else if(cat == word[0][1]){
+//             letterFound = true;
+//             console.log("You guess the second letter of the word");
+//             display("You guess the second letter of the word");
+//             cat.push(letter);
+//             i = i - 1;
+//             console.log(i + ": No. of tries left")
+//             display3(i + ": No. of tries left");
+//             if(cat.length === 3){
+//                 console.log("You win the guessing game. The word is cat.");
+//                 display("You win the guessing game. The word is cat.");
+//             }
+//             else{
+//                 console.log("Please guess the next word");
+//                 display("Please guess the next word");
+//             }
+//         }
+//         else if(cat == word[0][2]){
+//             letterFound = true;
+//             console.log("You guess the third letter of the word");
+//             display("You guess the third letter of the word");
+//             cat.push(letter);
+//             i = i - 1;
+//             console.log(i + ": No. of tries left")
+//             display3(i + ": No. of tries left");
+//             if(cat.length === 3){
+//                 console.log("You win the guessing game. The word is cat.");
+//                 display("You win the guessing game. The word is cat.");
+//             }
+//             else{
+//                 console.log("Please guess the next word");
+//                 display("Please guess the next word");
+//             }
+//         }
+//         else{
+//             i = i - 1;
+//             console.log(i + ": No. of tries left")
+//             display3(i + ": No. of tries left");
+//             console.log("Sorry. Please guess again.");
+//             display("Sorry. Please guess again.");
+//         }
+//     break;
+//     }
+}
 //for doggy
-var rolf  = function(letter){
+var rolf  = function(doggy){
 console.log("Hint: I love to run, l, annoying, lovely but not men best friend");
 display2("Hint: i love to pee by the fire hydrant");
 display3("You have 10 tries before your luck runs out");
     while(i > 0){
-        i = 10
-        if (letter == word[1][0]){
-            wordFound = true;
+        if (doggy == word[1][0]){
+            letterFound = true;
             console.log("You guess the first letter of the word");
             display("You guess the first letter of the word");
             doggy.push(letter);
@@ -233,8 +259,8 @@ display3("You have 10 tries before your luck runs out");
                 display("Please guess the next word");
             }
         }
-        else if(letter == word[1][1]){
-            wordFound = true;
+        else if(doggy == word[1][1]){
+            letterFound = true;
             console.log("You guess the second letter of the word");
             display("You guess the second letter of the word");
             doggy.push(letter);
@@ -250,8 +276,8 @@ display3("You have 10 tries before your luck runs out");
                 display("Please guess the next word");
             }
         }
-        else if(letter == word[1][2]){
-            wordFound = true;
+        else if(doggy == word[1][2]){
+            letterFound = true;
             console.log("You guess the third letter of the word");
             display("You guess the third letter of the word");
             doggy.push(letter);
@@ -267,8 +293,8 @@ display3("You have 10 tries before your luck runs out");
                 display("Please guess the next word");
             }
         }
-        else if(letter == word[1][3]){
-            wordFound = true;
+        else if(doggy == word[1][3]){
+            letterFound = true;
             console.log("You guess the third letter of the word");
             display("You guess the third letter of the word");
             doggy.push(letter);
@@ -284,8 +310,8 @@ display3("You have 10 tries before your luck runs out");
                 display("Please guess the next word");
             }
         }
-        else if(letter == word[1][4]){
-            wordFound = true;
+        else if(doggy == word[1][4]){
+            letterFound = true;
             console.log("You guess the third letter of the word");
             display("You guess the third letter of the word");
             doggy.push(letter);
@@ -308,20 +334,18 @@ display3("You have 10 tries before your luck runs out");
             console.log("Sorry. Please guess again.");
             display("Sorry. Please guess again.");
         }
-    break;
     }
 }
 
 //for alphabet
 
-var alpha = function(letter){
+var alpha = function(alphabet){
 console.log("Hint: Every English book uses me.");
 display2("Hint: Every English book uses me.");
 display3("You have 10 tries before your luck runs out");
     while(i > 0){
-        i = 10
-        if (letter == word[2][0]){
-            wordFound = true;
+        if (alphabet == word[2][0]){
+            letterFound = true;
             console.log("You guess the first letter of the word");
             display("You guess the first letter of the word");
             alphabet.push(letter);
@@ -337,8 +361,8 @@ display3("You have 10 tries before your luck runs out");
                 display1("Please guess the next word");
             }
         }
-        else if(letter == word[2][1]){
-            wordFound = true;
+        else if(alphabet == word[2][1]){
+            letterFound = true;
             console.log("You guess the second letter of the word");
             display("You guess the second letter of the word");
             alphabet.push(letter);
@@ -354,8 +378,8 @@ display3("You have 10 tries before your luck runs out");
                 display("Please guess the next word");
             }
         }
-        else if(letter == word[2][2]){
-            wordFound = true;
+        else if(alphabet == word[2][2]){
+            letterFound = true;
             console.log("You guess the third letter of the word");
             display("You guess the third letter of the word");
             alphabet.push(letter);
@@ -371,8 +395,8 @@ display3("You have 10 tries before your luck runs out");
                 display("Please guess the next word");
             }
         }
-        else if(letter == word[2][3]){
-            wordFound = true;
+        else if(alphabet == word[2][3]){
+            letterFound = true;
             console.log("You guess the third letter of the word");
             display("You guess the third letter of the word");
             alphabet.push(letter);
@@ -388,8 +412,8 @@ display3("You have 10 tries before your luck runs out");
                 display("Please guess the next word");
             }
         }
-        else if(letter == word[2][4]){
-            wordFound = true;
+        else if(alphabet == word[2][4]){
+            letterFound = true;
             console.log("You guess the third letter of the word");
             display("You guess the third letter of the word");
             alphabet.push(letter);
@@ -405,8 +429,8 @@ display3("You have 10 tries before your luck runs out");
                 display("Please guess the next word");
             }
         }
-        else if(letter == word[2][5]){
-            wordFound = true;
+        else if(alphabet == word[2][5]){
+            letterFound = true;
             console.log("You guess the third letter of the word");
             display("You guess the third letter of the word");
             alphabet.push(letter);
@@ -422,8 +446,8 @@ display3("You have 10 tries before your luck runs out");
                 display("Please guess the next word");
             }
         }
-        else if(letter == word[2][6]){
-            wordFound = true;
+        else if(alphabet == word[2][6]){
+            letterFound = true;
             console.log("You guess the third letter of the word");
             display("You guess the third letter of the word");
             alphabet.push(letter);
@@ -439,8 +463,8 @@ display3("You have 10 tries before your luck runs out");
                 display("Please guess the next word");
             }
         }
-        else if(letter == word[2][7]){
-            wordFound = true;
+        else if(alphabet == word[2][7]){
+            letterFound = true;
             console.log("You guess the third letter of the word");
             display("You guess the third letter of the word");
             alphabet.push(letter);
@@ -463,12 +487,12 @@ display3("You have 10 tries before your luck runs out");
             console.log("Sorry. Please guess again.");
             display("Sorry. Please guess again.");
         }
-    break;
     }
 }
 
 display("Select difficulty: easy, medium or hard");
 var inputHappened = function(userInput){
+    meow(secretWord, userInput)
     if (userInput == "easy"){
         meow(cat);
     }
@@ -477,6 +501,7 @@ var inputHappened = function(userInput){
     }
     else if (userInput == "hard"){
         alpha(alphabet);
+
     }
     else{
         display("INVALID ENTRY");
